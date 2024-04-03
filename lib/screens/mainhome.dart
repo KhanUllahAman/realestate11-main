@@ -33,7 +33,7 @@ class mainHome extends StatelessWidget {
                 const CircleAvatar(
                   radius: 30,
                   backgroundImage: AssetImage(
-                    'assets/images/3.jpg',
+                    'assets/images/p1.jpg',
                   ),
                 ),
                 const SizedBox(width: 10),

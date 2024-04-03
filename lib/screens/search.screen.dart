@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:realestate/controller/mainhome_controller.dart';
+import 'package:realestate/screens/widgets/searchCard.dart';
 
 class Searchscreen extends StatelessWidget {
   final MainHomeController controller = Get.put(MainHomeController());
@@ -27,7 +29,7 @@ class Searchscreen extends StatelessWidget {
                   const CircleAvatar(
                     radius: 30,
                     backgroundImage: AssetImage(
-                      'assets/images/3.jpg',
+                      'assets/images/p1.jpg',
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -191,51 +193,7 @@ class Searchscreen extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Stack(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(15),
-                            child: Image.asset(
-                              'assets/images/11.jpg',
-                              fit: BoxFit.cover,
-                              width: double.infinity,
-                              height: 400,
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 60,
-                          left: 0,
-                          right: 0,
-                          child: Container(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 20),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(15),
-                                topRight: Radius.circular(15),
-                              ),
-                            ),
-                            child: Text(
-                              'Your text here',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  searchCard(),
                   SizedBox(
                     height: 100,
                   )
