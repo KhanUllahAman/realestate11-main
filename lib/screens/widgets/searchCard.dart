@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class searchCard extends StatelessWidget {
-  const searchCard({
-    super.key,
-  });
+class SearchCard extends StatelessWidget {
+  const SearchCard({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,42 +22,52 @@ class searchCard extends StatelessWidget {
                 'assets/images/16.jpg',
                 fit: BoxFit.cover,
                 width: double.infinity,
-                height: 400,
+                // height: 200, // Adjusted height
               ),
             ),
           ),
           Positioned(
             top: 10,
             left: 10,
-            width: 100,
-            height: 35,
             child: Container(
+              padding: const EdgeInsets.symmetric(
+                vertical: 6,
+                horizontal: 10,
+              ),
               decoration: BoxDecoration(
                 color: Colors.red,
-                borderRadius:
-                    BorderRadius.all(Radius.circular(18)),
+                borderRadius: BorderRadius.circular(18),
               ),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.live_tv_outlined, color: Colors.white, size: 15,),
-                  SizedBox(width: 8,),
-                  Text("Live", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),),
+                  Icon(
+                    Icons.live_tv_outlined,
+                    color: Colors.white,
+                    size: 15,
+                  ),
+                  SizedBox(width: 8),
+                  Text(
+                    "Live",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                 ],
               ),
-              )
             ),
+          ),
           Positioned(
-            bottom: 30,
+            bottom: 20,
             left: 10,
             right: 10,
             child: Container(
-              padding: EdgeInsets.symmetric(
-                  vertical: 15, horizontal: 15),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius:
-                    BorderRadius.all(Radius.circular(15)),
+                    BorderRadius.all(Radius.circular(15),
+              ),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,60 +76,45 @@ class searchCard extends StatelessWidget {
                     'Makeen Eastern Fund',
                     style: GoogleFonts.poppins(
                       fontWeight: FontWeight.w500,
-                      fontSize: 23.0,
+                      fontSize: 20.0, // Adjusted font size
                       color: Colors.black,
                     ),
                   ),
                   SizedBox(height: 5),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xff0c0e21)),
+                          backgroundColor: Color(0xff0c0e21),
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 10,
+                            horizontal: 20,
+                          ),
+                        ),
                         onPressed: () {},
                         child: Text(
                           "01h : 30m : 05s",
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 60),
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              child: Container(
-                                child: CircleAvatar(
-                                  backgroundImage: AssetImage(
-                                      "assets/images/p2.jpg"),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 29),
-                              child: Positioned(
-                                child: Container(
-                                  child: CircleAvatar(
-                                    backgroundImage: AssetImage(
-                                        "assets/images/p3.jpg"),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 57),
-                              child: Positioned(
-                                child: Container(
-                                  child: CircleAvatar(
-                                    backgroundImage: AssetImage(
-                                        "assets/images/p4.jpg"),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            backgroundImage:
+                                AssetImage("assets/images/p2.jpg"),
+                          ),
+                          SizedBox(width: 5),
+                          CircleAvatar(
+                            backgroundImage:
+                                AssetImage("assets/images/p3.jpg"),
+                          ),
+                          SizedBox(width: 5),
+                          CircleAvatar(
+                            backgroundImage:
+                                AssetImage("assets/images/p4.jpg"),
+                          ),
+                        ],
                       ),
                     ],
                   ),

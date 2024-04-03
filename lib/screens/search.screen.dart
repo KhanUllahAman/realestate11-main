@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:realestate/controller/mainhome_controller.dart';
@@ -14,13 +13,12 @@ class Searchscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MainHomeController>(
-      builder: (_) => Obx(() => Scaffold(
+    return Scaffold(
             backgroundColor: Colors.white,
             appBar: AppBar(
               automaticallyImplyLeading: false,
               backgroundColor:
-                  _.isScrolled.value ? Color(0xff0c0e21) : Colors.transparent,
+                  Color(0xff0c0e21),
               surfaceTintColor: Colors.transparent,
               elevation: 0,
               toolbarHeight: 80,
@@ -42,8 +40,7 @@ class Searchscreen extends StatelessWidget {
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w600,
                           fontSize: 18.0,
-                          color:
-                              _.isScrolled.value ? Colors.white : Colors.black,
+                          color:Colors.white,
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -52,9 +49,7 @@ class Searchscreen extends StatelessWidget {
                           Icon(
                             Iconsax.location,
                             size: 15,
-                            color: _.isScrolled.value
-                                ? Colors.white
-                                : Colors.black,
+                            color: Colors.white,
                           ),
                           const SizedBox(width: 5),
                           Text(
@@ -62,9 +57,7 @@ class Searchscreen extends StatelessWidget {
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w400,
                               fontSize: 14.0,
-                              color: _.isScrolled.value
-                                  ? Colors.white
-                                  : Colors.grey,
+                              color: Colors.white,
                             ),
                           ),
                         ],
@@ -193,14 +186,13 @@ class Searchscreen extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  searchCard(),
+                  SearchCard(),
                   SizedBox(
                     height: 100,
                   )
                 ],
               ),
             ),
-          )),
-    );
+          );
   }
 }

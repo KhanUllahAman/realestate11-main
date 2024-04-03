@@ -162,9 +162,11 @@ class NearbyPropertyCard extends StatelessWidget {
                             color: Colors.black,
                           ),
                         ),
-                        SizedBox(
-                          width: 5,
-                        ),
+                      ],
+                    ),
+                    SizedBox(height: 5,),
+                    Row(
+                      children: [
                         Icon(
                           Icons.square_foot_outlined,
                           size: 17,
@@ -181,7 +183,7 @@ class NearbyPropertyCard extends StatelessWidget {
                           ),
                         ),
                       ],
-                    ),
+                    )
                   ],
                 ),
               ),
