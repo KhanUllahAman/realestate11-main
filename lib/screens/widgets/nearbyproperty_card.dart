@@ -31,7 +31,7 @@ class NearbyPropertyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final HeartController heartController = Get.put(HeartController());
     return Container(
-      width: 350,
+      width: 320,
       margin: EdgeInsets.only(right: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -164,7 +164,9 @@ class NearbyPropertyCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 5,),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Row(
                       children: [
                         Icon(

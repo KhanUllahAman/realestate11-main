@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:realestate/screens/mainhome.dart';
+import 'package:realestate/screens/profilescreen.dart';
 import 'package:realestate/screens/search.screen.dart';
+import 'package:realestate/screens/wallet_screen.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);
@@ -15,8 +17,8 @@ class _NavBarState extends State<NavBar> {
   List<Widget> pages = [
     mainHome(),
     Searchscreen(),
-    mainHome(),
-    mainHome(),
+    WalletScreen(),
+    ProfileScreen(),
   ];
 
   @override
