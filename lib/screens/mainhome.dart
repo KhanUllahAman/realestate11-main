@@ -1,7 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:realestate/screens/cards_details.dart';
 import 'package:realestate/screens/widgets/My_Button.dart';
 import 'package:realestate/screens/widgets/custom_Appbar.dart';
 import 'package:realestate/screens/widgets/home_widgets.dart';
@@ -194,6 +197,14 @@ class mainHome extends StatelessWidget {
                       bedroom: '4 Bedroom',
                       bathroom: '4 Bathroom',
                       squarefit: '6000 sq',
+                      MyonTap: () {
+                        Get.to(
+                            CardsDetails(
+                              imagePath: 'assets/images/11.jpg',
+                              title: 'Sky Dandelions',
+                            ),
+                            transition: Transition.rightToLeft);
+                      },
                     ),
                     NearbyPropertyCard(
                       imagePath: "assets/images/12.jpg",
@@ -204,6 +215,14 @@ class mainHome extends StatelessWidget {
                       bedroom: '3 Bedroom',
                       bathroom: '3 Bathroom',
                       squarefit: '1000 sq',
+                      MyonTap: () {
+                        Get.to(
+                            CardsDetails(
+                              imagePath: 'assets/images/12.jpg',
+                              title: 'Cozy Apartment',
+                            ),
+                            transition: Transition.rightToLeft);
+                      },
                     ),
                     NearbyPropertyCard(
                       imagePath: "assets/images/13.jpg",
@@ -214,6 +233,14 @@ class mainHome extends StatelessWidget {
                       bedroom: '5 Bedroom',
                       bathroom: '5 Bathroom',
                       squarefit: '2000 sq',
+                      MyonTap: () {
+                        Get.to(
+                            CardsDetails(
+                              imagePath: 'assets/images/13.jpg',
+                              title: 'Luxury Villa',
+                            ),
+                            transition: Transition.rightToLeft);
+                      },
                     ),
                     NearbyPropertyCard(
                       imagePath: "assets/images/14.jpg",
@@ -224,6 +251,14 @@ class mainHome extends StatelessWidget {
                       bedroom: '5 Bedroom',
                       bathroom: '5 Bathroom',
                       squarefit: '5000 sq',
+                      MyonTap: () {
+                        Get.to(
+                            CardsDetails(
+                              imagePath: 'assets/images/14.jpg',
+                              title: 'Modern Condo',
+                            ),
+                            transition: Transition.rightToLeft);
+                      },
                     ),
                     NearbyPropertyCard(
                       imagePath: "assets/images/15.jpg",
@@ -234,6 +269,14 @@ class mainHome extends StatelessWidget {
                       bedroom: '3 Bedroom',
                       bathroom: '3 Bathroom',
                       squarefit: '1000 sq',
+                      MyonTap: () {
+                        Get.to(
+                            CardsDetails(
+                              imagePath: 'assets/images/15.jpg',
+                              title: 'Charming Bungalow',
+                            ),
+                            transition: Transition.rightToLeft);
+                      },
                     ),
                   ],
                 ),
